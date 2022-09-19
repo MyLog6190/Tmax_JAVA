@@ -12,8 +12,21 @@ public class OperationPromotionExample {
 		// 리터럴 - 컴파일시 계산되어 바뀜(byte)
 		byte result1 = 10 + 20;
 		
+		int a = 10;
+		int b = 20;
+		
+		// byte타입 + byte 타입 = int타입 + int타입 = int타입으로 변환
+		byte res = (byte)a + (byte)b; 
+		
+		// 정수타입 (byte, short, char, int) -> 연산시 int타입으로 변환하여 계산됨
+		long l1 = 10000;
+		
+		// 실수타입 (float, double) -> 연산시 double으로 계산됨 - default타입 - double
+		float f1 = 3.14;
+		
+		
 		byte v3 = 10;
-		int v4 =100;
+		int v4 = 100;
 		long v5 = 1000L;
 		
 		// byte + int => int+int(v3+v4)=> int + long=> long+long((v3+v4)+v5)
