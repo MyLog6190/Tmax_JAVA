@@ -2,12 +2,12 @@ package ch05.sec06;
 
 import java.util.Iterator;
 
-public class ArrayCreateByNewExample {
+public class ArrayCreateByNewExample
+{
 	public static void main(String[] args) {
 		byte[] bArray = new byte[3];
-		for(int i=0; i<bArray.length; i++) {
+		for(int i=0; i<bArray.length; i++)
 			System.out.println(bArray[i]);
-		}
 		System.out.println("\n==================");
 		
 		short[] sArray = new short[3];

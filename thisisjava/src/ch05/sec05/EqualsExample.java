@@ -10,11 +10,17 @@ public class EqualsExample {
 			System.out.println("strVar1과 strVar2는 참조가 같음");
 		}
 		
-		String strVar3 = "홍길동";
-		String strVar4 = "홍길동";
-		
+		//new에 의한 객체생성을 하면 각각 다른 객체로 생성됨
+		String strVar3 = new String("홍길동");
+		String strVar4 = new String("홍길동");
 		if(strVar3.equals(strVar4)) {
-			System.out.println("strVar1과 strVar2는 참조가 같음");
+			System.out.println("strVar3과 strVar4는 문자열이 동등합니다.");
+		}
+				
+		if(strVar3 == strVar4) {
+			System.out.println("strVar3과 strVar4는 참조가 같음");
+		} else {
+			System.out.println("strVar3과 strVar4는 참조가 다름");
 		}
 		
 		

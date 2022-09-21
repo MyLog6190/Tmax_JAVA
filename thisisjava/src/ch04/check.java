@@ -12,6 +12,8 @@ public class check {
 		default -> score1 = 60;
 		}
 		
+		score1=grade=="A"?100:(grade=="B")?80:60;
+		
 		int sum = 0;
 		for(int i = 1; i <= 100; i++) {
 			if((i % 3) == 0) {
@@ -29,6 +31,8 @@ public class check {
 				break;
 			}
 		}
+		
+		
 		int x;
 		int y;
 		for(x = 1; x <= 10; x++) {
@@ -46,20 +50,22 @@ public class check {
 			System.out.println();
 		}
 		
+		
 		int money = 0;
-		String intputStr = null;
-		while(intputStr.equals("4")) {
+		String inputStr = null;
+		while(inputStr.equals("4")) {
 			Scanner sc = new Scanner(System.in);
 			System.out.println("---------------------------");
 			System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
 			System.out.println("---------------------------");
 			System.out.print("선택 : ");
-			intputStr = sc.nextLine();
+			inputStr = sc.nextLine(); 
 			
-			switch(intputStr) {
+			switch(inputStr) {
 			case "1" : 
 				System.out.print("예금액> ");
-				money = Integer.parseInt(sc.nextLine());	
+				int amount = Integer.parseInt(sc.nextLine());
+				money += amount; 
 				continue;
 			case "2" :
 				System.out.print("출금액> ");
@@ -79,3 +85,4 @@ public class check {
 		}
 	}
 }
+

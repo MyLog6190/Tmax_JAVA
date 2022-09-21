@@ -1,6 +1,6 @@
 package ch05.sec06;
 
-public class ArrayCreateByValueListExample {
+public class ArrayCreateByValueListExample2 {
 	public static void main(String[] args) {
 		// 배열 변수 선언
 		int[] scores;
