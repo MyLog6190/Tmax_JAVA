@@ -23,6 +23,7 @@ public class chack {
 				subSum = scores[j][0];
 				subSum = scores[j][1];
 				subSum = scores[j][2];
+				subSum = scores[j][3];
 				sum+=scores[i][j];
 			}
 			if(i != scores.length)
