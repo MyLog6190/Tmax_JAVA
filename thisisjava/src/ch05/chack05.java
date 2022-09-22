@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class chack05 {
 	public static void main(String[] args) {
-		
 		////////// 7
 		int[] array = {1, 5, 3, 8, 2};
 		int temp = 0;
@@ -43,14 +42,14 @@ public class chack05 {
 		Scanner sc = new Scanner(System.in);
 		int countStudent = 0;;
 		int score[] = null;
-		boolean run = true;
+		int menu = 0;
 		
-		while(run) {
-			System.out.println("------------------------------------------");
+		while(menu != 5) {
+			System.out.println("--------------------------------------------");
 			System.out.println("1.학생수 | 2.점수입력 | 3.점수리스트 | 4.분석 | 5.종료");
-			System.out.println("------------------------------------------");
+			System.out.println("--------------------------------------------");
 			System.out.print("선택> ");
-			int menu = Integer.parseInt(sc.nextLine());
+			menu = Integer.parseInt(sc.nextLine());
 			
 			int temp2 = 0;
 			
@@ -60,7 +59,7 @@ public class chack05 {
 				countStudent  = Integer.parseInt(sc.nextLine());
 				break;
 			case 2:
-				System.out.print("점수입력> ");
+				System.out.println("점수입력> ");
 				score = new int[countStudent];
 				for(int i = 0; i < score.length; i++) {
 					System.out.print("score["+i+"] : ");
@@ -68,9 +67,12 @@ public class chack05 {
 				}
 				break;
 			case 3:
+				int sum2 = 0;
 				for(int i : score) {
-					System.out.println(i);
+					System.out.print("score["+i+"] : ");
 				}
+				
+				break;
 			case 4:
 				for(int i = 0; i < score.length; i++) {
 					for(int j = i+1; j < score.length - 1; j++) {
@@ -81,13 +83,15 @@ public class chack05 {
 						}
 					}
 				}
-				System.out.println("최고 점수 : " + score[0]);
-				int sum2 = 0;
+				
+				System.out.print("최고 점수 : " + score[0]);
+				int sum3 = 0;
 				for(int i : score) {
-					sum2 += i;
-					System.out.println(i);
+					sum3 += i;
 				}
-			case 5:   break;
+				System.out.println(" 평균 : " + ((double)sum3) / score.length);
+				
+			case 5: System.out.println("종료"); break;
 			}
 		}
 		
