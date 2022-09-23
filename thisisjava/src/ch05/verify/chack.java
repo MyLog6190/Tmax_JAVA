@@ -1,4 +1,4 @@
-package ch05;
+package ch05.verify;
 
 public class chack {
 	public static void main(String[] args) {

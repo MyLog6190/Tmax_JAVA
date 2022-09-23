@@ -1,5 +1,6 @@
-package ch05;
+package ch05.verify;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class chack05 {
@@ -9,7 +10,7 @@ public class chack05 {
 		int temp = 0;
 		
 		for(int i = 0; i < array.length; i++) {
-			for(int j = i+1; j < array.length - 1; j++) {
+			for(int j = i+1; j < array.length; j++) {
 				if(array[i] < array[j]) {
 					temp = array[i];
 					array[i] = array[j];
@@ -18,6 +19,38 @@ public class chack05 {
 			}
 		}
 		System.out.println(array[0]);
+		
+		// 최대값
+		int max = 0;
+		for(int i = 0; i < array.length; i++) {
+			if(max < array[i]) {
+				max = array[i];
+			}
+		}
+		
+		// 최소값
+		int min = 100;
+		for(int i = 0; i < array.length; i++) {
+			if(max > array[i]) {
+				min = array[i];
+			}
+		}
+		
+		// 오름차순 정렬
+		
+		for(int i = 0; i < array.length; i++) {
+			for(int j = i+1; j < array.length; j++) {
+				if(array[i] > array[j]) {
+					temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
+				}
+			}
+		}
+		
+		// arrays.toString(array)
+		// array 출력
+		System.out.println(Arrays.toString(array));
 		
 		
 		//////// 8
@@ -69,13 +102,13 @@ public class chack05 {
 			case 3:
 				int sum2 = 0;
 				for(int i : score) {
-					System.out.print("score["+i+"] : ");
+					System.out.println("score : "+i);
 				}
 				
 				break;
 			case 4:
 				for(int i = 0; i < score.length; i++) {
-					for(int j = i+1; j < score.length - 1; j++) {
+					for(int j = i+1; j < score.length; j++) {
 						if(score[i] < score[j]) {
 							temp2 = array[i];
 							score[i] = score[j];
@@ -90,6 +123,7 @@ public class chack05 {
 					sum3 += i;
 				}
 				System.out.println(" 평균 : " + ((double)sum3) / score.length);
+				
 				
 			case 5: System.out.println("종료"); break;
 			}
