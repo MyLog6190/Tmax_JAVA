@@ -1,7 +1,6 @@
 package ch06.verify;
-
+///////// 15
 public class MamberService {
-	///////// 15
 	boolean login(String id, String password) {
 		if(id.equals("hong") && password.equals(password)) {
 			return true;

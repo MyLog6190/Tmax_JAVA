@@ -1,5 +1,6 @@
 package ch06.verify;
 
+/////// 18
 public class ShopService {
 	private static ShopService instance = new ShopService();
 	
