@@ -1,11 +1,15 @@
 package ch06.verify;
 ///////// 15
 public class MamberService {
+//	boolean login(String id, String password) {
+//		if(id.equals("hong") && "12345".equals(password)) {
+//			return true;
+//		}
+//		return false;
+//	}
+	
 	boolean login(String id, String password) {
-		if(id.equals("hong") && password.equals(password)) {
-			return true;
-		}
-		return false;
+		return id.equals("hong") && "12345".equals(password)?true:false;
 	}
 	
 	void logout(String id) {

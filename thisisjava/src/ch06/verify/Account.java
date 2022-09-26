@@ -2,6 +2,8 @@ package ch06.verify;
 
 public class Account {
 	/////// 19
+	static final int MIN_BALANCE = 0;
+	static final int MAX_BALANCE = 1000000;
 	private int balance;
 	
 	public Account() {}
@@ -11,11 +13,10 @@ public class Account {
 	}
 
 	public void setBalance(int balance) {
-		if(0 <= balance && balance <= 1000000) {
+		if(MIN_BALANCE <= balance && balance <= MAX_BALANCE) {
 			this.balance = balance;
-		}else {
-			return;
 		}
+		
 	}
 }
 

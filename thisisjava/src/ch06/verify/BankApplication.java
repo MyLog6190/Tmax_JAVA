@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 /////////// 20
 public class BankApplication {
+	static Scanner sc = new Scanner(System.in);
+	static Account2[] accounts = new Account2[100];
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		Account2[] accounts = new Account2[100];
 		boolean run = true;
 		while(run) {
 			System.out.println("------------------------------------------");
@@ -98,8 +98,8 @@ public class BankApplication {
 				for(Account2 account2 : accounts) {
 					try {
 						if(accountNumber.equals(account2.getAccountNumber())) {
-							if(account2.getAccountAmount()-accountAmount >= 0){
-								account2.setAccountAmount(account2.getAccountAmount()-accountAmount);
+							if(account2.getAccountAmount()- accountAmount >= 0){
+								account2.setAccountAmount(account2.getAccountAmount()- accountAmount);
 							}else {
 								System.out.println("잔액 부족");
 							}
