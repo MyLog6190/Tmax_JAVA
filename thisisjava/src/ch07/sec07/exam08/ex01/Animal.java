@@ -6,14 +6,14 @@ public class Animal {
 	}
 }
 
-class Bird extends Animal {
+class Bird extends Animal{
 	
 }
-
-class Dog extends Animal {
+	
+class Dog extends Animal{
 	
 }
-
+	
 class Fish extends Animal{
-	
+
 }
