@@ -25,5 +25,19 @@ class Student {
 		return studentNum;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Student) {
+			Student student = (Student) obj;
+			if(studentNum.equals(student.getStudentNum())) {
+				return true;
+			}
+		}
+		return false;
+	}
 	
+	@Override
+	public int hashCode() {
+		return studentNum.hashCode();
+	}
 }

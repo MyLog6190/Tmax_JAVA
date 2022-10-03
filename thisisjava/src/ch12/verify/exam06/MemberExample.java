@@ -20,6 +20,4 @@ class Member {
 	public String toString() {
 		return id + ": " + name ;
 	}
-	
-	
 }
