@@ -10,7 +10,7 @@ public class GetPropertyExample {
 		System.out.println(System.getProperty("user.name"));
 		System.out.println(System.getProperty("user.home"));
 		
-		// 전체 키롸 값 출력
+		// 전체 키와 값 출력
 		Properties props = System.getProperties();
 		
 		// Set컬렉션 중복을 배제한 객체저장

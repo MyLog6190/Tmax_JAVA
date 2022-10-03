@@ -10,7 +10,7 @@ public class DataTimeCompreExample {
 		LocalDateTime startDateTime = LocalDateTime.of(2021, 1, 1, 1, 0, 0);
 		System.out.println(dtf.format(startDateTime));
 		
-		LocalDateTime endDateTime = LocalDateTime.of(2022, 12, 30, 1, 0, 0);
+		LocalDateTime endDateTime = LocalDateTime.of(2021, 12, 30, 1, 0, 0);
 		System.out.println(dtf.format(endDateTime));
 		
 		if(startDateTime.isBefore(endDateTime)) {
@@ -30,7 +30,7 @@ public class DataTimeCompreExample {
 		System.out.println(remainDay);
 		long remainHour = startDateTime.until(endDateTime, ChronoUnit.HOURS);
 		System.out.println(remainHour);
-		long remainMinus = startDateTime.until(endDateTime, ChronoUnit.MINUTES);
+		long remainMinute = startDateTime.until(endDateTime, ChronoUnit.MINUTES);
 		System.out.println(remainMonth);
 		long remainSecond = startDateTime.until(endDateTime, ChronoUnit.SECONDS);
 		System.out.println(remainSecond);
