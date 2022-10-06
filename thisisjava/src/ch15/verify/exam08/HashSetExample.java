@@ -18,7 +18,8 @@ public class HashSetExample {
 	}
 }
 
-class Student implements Comparable<Student>{
+class Student {
+
 	public int studentNum;
 	public String name;
 	
@@ -27,12 +28,15 @@ class Student implements Comparable<Student>{
 		this.name = name;
 	}
 
-
 	@Override
-	public int compareTo(Student o) {
-		// TODO Auto-generated method stub
-		return this.studentNum - o.studentNum;
+	public int hashCode() {
+		return studentNum;
 	}
-
+	
+	@Override
+	public boolean equals(Object obj) {
+		Student student = (Student)obj;
+		return student.studentNum == studentNum;
+	}
 	
 }
