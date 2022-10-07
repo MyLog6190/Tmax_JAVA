@@ -68,14 +68,7 @@ public class ChatServer {
 		try {
 			serverSocket.close();
 			threadPool.shutdown();
-			chatRoom.values().stream().forEach(new Consumer<SocketClient>() {
-
-				@Override
-				public void accept(SocketClient t) {
-					t.close();
-				}
-				
-			});
+			chatRoom.values().stream().forEach((t) -> t.close());
 			System.out.println("[서버] 종료됨");
 		}catch(Exception e) {
 			System.out.println(e);

@@ -15,10 +15,7 @@ public class copyExample {
 		
 		try {
 			FileInputStream fis = new FileInputStream(filePath);
-			FileOutputStream fos = new File(copyFilePath);
-			if(fos.sist) {
-				
-			}
+			FileOutputStream fos = new FileOutputStream(copyFilePath);
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
 			

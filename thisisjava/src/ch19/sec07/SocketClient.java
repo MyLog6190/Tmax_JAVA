@@ -64,7 +64,8 @@ public class SocketClient {
 	
 	public void send(String json) {
 		try {
-			
+			dos.writeUTF(json);
+			dos.flush();
 		} catch(Exception e) {
 			System.out.println(e);
 		}// send()
