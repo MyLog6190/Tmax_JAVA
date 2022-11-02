@@ -31,7 +31,7 @@ public class BoardWithFileInsertExample {
 			   pstmt.setString(2, "함박눈이 내려요");
 			   pstmt.setString(3, "winter");
 			   pstmt.setString(4, "snow.jpg");
-			   pstmt.setBlob(5,new FileInputStream("src/ch20/sec06/snow.jpg"));
+			   pstmt.setBlob(5,new FileInputStream("src/ch20/oracle/sec06/snow.jpg"));
 			   
 			//3-3. 쿼리문 전달 및 실행 
 			//-- insert/update/delete 일때 executeUpdate()

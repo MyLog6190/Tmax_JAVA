@@ -24,8 +24,8 @@ public class UserInsertExample2 {
 		//3. sql문작성 dbms에 전달
 		  String sql=new StringBuilder()
 				    .append("insert into users ")
-			
-				    .append("values('kim','김길동','1234',25,'kim@daum.net')").toString();
+				    .append("(userid,username,userpassword,userage,useremail)")
+				    .append(" values('kim','김길동','1234',25,'kim@daum.net')").toString();
 		  System.out.println(sql);
 		//3-2. 쿼리문 전달객체 생성
 		  Statement stmt = conn.createStatement();

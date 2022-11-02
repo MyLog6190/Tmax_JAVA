@@ -1,7 +1,9 @@
 package ch20.stmt;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.Statement;
 
 //1. 드라이버 로딩
